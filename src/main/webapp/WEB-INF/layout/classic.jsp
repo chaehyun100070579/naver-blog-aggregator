@@ -43,9 +43,12 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href='<spring:url value="/" />'>Home</a></li>
+
               <li><a href='<spring:url value="/users.html"></spring:url>'>Users</a></li>
-              <li><a href="#">Contact</a></li>
-  
+
+              <li><a href="#">About</a></li>
+
+
             </ul>
 
           </div><!--/.nav-collapse -->

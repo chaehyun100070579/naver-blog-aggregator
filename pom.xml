@@ -176,7 +176,6 @@
 		</dependency>
 
 		
-		
 		<!-- Spring MVC for Portlet Environments (depends on spring-core, spring-beans, 
 			spring-context, spring-web) Define this if you use Spring MVC with a Portlet 
 			Container (org.springframework.web.portlet.*) -->
@@ -195,7 +194,6 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 
 
 		<dependency>
