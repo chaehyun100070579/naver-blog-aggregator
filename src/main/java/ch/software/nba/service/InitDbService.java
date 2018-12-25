@@ -38,7 +38,6 @@ public class InitDbService {
 	
 	@PostConstruct
 	public void init() {
-		
 		Role roleUser = new Role();
 		roleUser.setName("ROLE_USER"); 
 		roleRepository.save(roleUser);

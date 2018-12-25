@@ -10,7 +10,6 @@
     <definition name="index" extends="common">
 	    <put-attribute name="title" value="Naver Blog Aggregator" />
 	    <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
-
 	    <put-attribute name="current" value="index"></put-attribute>
  	</definition>
  	
