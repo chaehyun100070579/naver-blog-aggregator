@@ -40,6 +40,8 @@
 	
 	<jpa:repositories base-package="ch.software.nba.repository" />
 	
+	<import resource="security.xml"/>
+	
 
 
 </beans>
