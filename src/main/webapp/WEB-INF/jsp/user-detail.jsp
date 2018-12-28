@@ -10,7 +10,7 @@
 <c:forEach items="${user.blogs}" var="blog">
 	<h1>${blog.name}</h1>
 	<p>${blog.url}</p>
-	<table>
+	<table class="table table-bordered table-hover table-striped">
 		<head>
 		<tr>
 			<th>Title</th>
