@@ -49,38 +49,53 @@
 			</div>
 		</div>
 	</div>
-
 </form:form>
 
 
 
 
+<div>
 
+	<br /> <br />
 
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$('.nav-tabs a:first').tab('show') // Select first tab
+	});
+	</script>
 
+	<!-- Nav tabs -->
+	<ul class="nav nav-tabs" role="tablist">
+		<c:forEach items="${user.blogs}" var="blog">
+			<li role="presentation"><a href="#blog_${blog.id}"
+				aria-controls="blog" role="tab" data-toggle="tab">${blog.name}</a></li>
+		</c:forEach>
+	</ul>
 
+	<!-- Tab panes -->
+	<div class="tab-content">
+		<c:forEach items="${user.blogs}" var="blog">
+			<div role="tabpanel" class="tab-pane" id="blog_${blog.id}">
+				<h1>${blog.name}</h1>
+				<p>${blog.url}</p>
+				<table class="table table-bordered table-hover table-striped">
+					<head>
+					<tr>
+						<th>Title</th>
+						<th>Link</th>
+					</tr>
+					</head>
+					<tbody>
+						<c:forEach items="${blog.items}" var="item">
+							<tr>
+								<td>${item.title}</td>
+								<td>${item.link}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</c:forEach>
+	</div>
 
-
-<c:forEach items="${user.blogs}" var="blog">
-	<h1>${blog.name}</h1>
-	<p>${blog.url}</p>
-	<table class="table table-bordered table-hover table-striped">
-		<head>
-		<tr>
-			<th>Title</th>
-			<th>Link</th>
-		</tr>
-		</head>
-		<tbody>
-			<c:forEach items="${blog.items}" var="item">
-				<tr>
-					<td>${item.title}</td>
-					<td>${item.link}</td>
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
-</c:forEach>
-
-
-
+</div>
