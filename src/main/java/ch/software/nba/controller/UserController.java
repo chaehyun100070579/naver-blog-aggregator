@@ -1,5 +1,7 @@
 package ch.software.nba.controller;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -44,4 +46,14 @@ public class UserController {
 		userService.save(user);
 		return "redirect:/register.html?success=true";
 	}
+	
+	@RequestMapping("/account")
+	public String account(Model model, Principal principal) {
+		
+		String name = principal.getName();
+		model.addAttribute("user", userService.findOneWithBlogs(name));
+		return "user-detail";
+		
+	}
+	
 }
