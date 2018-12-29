@@ -52,7 +52,7 @@ public class UserService {
 		User user = findOne(id);
 		List<Blog> blogs = blogRepository.findByUser(user);
 		for (Blog blog : blogs) {
-			List<Item> items =  itemRepository.findByBlog(blog, new PageRequest(0, 10, Direction.ASC, "publishedDate"));
+			List<Item> items =  itemRepository.findByBlog(blog, new PageRequest(0, 10, Direction.DESC, "publishedDate"));
 			blog.setItems(items);
 		}
 		user.setBlogs(blogs);
@@ -75,6 +75,15 @@ public class UserService {
 	public User findOneWithBlogs(String name) {
 		User user = userRepository.findByName(name);
 		return findOneWithBlogs(user.getId());
+	}
+
+	
+	public void delete(int id) {
+		userRepository.delete(id);
+	}
+	
+	public User findOne(String username) {
+		return userRepository.findByName(username);
 	}
 
 }
