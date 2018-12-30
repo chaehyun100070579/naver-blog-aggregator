@@ -66,7 +66,7 @@ public class InitDbService {
 		
 		Item item1 = new Item();
 		item1.setBlog(blogNaverTravel);
-		item1.setTitle("first");
+		item1.setTitle("けいしけいしけし");
 		item1.setLink("https://blog.naver.com/findjeju/221426162613");
 		item1.setPublishedDate(new Date());
 		itemRepositoy.save(item1);

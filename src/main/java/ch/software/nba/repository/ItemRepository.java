@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import ch.software.nba.entity.Blog;
 import ch.software.nba.entity.Item;
 
-
 public interface ItemRepository extends JpaRepository<Item, Integer> {
-	
+
 	List<Item> findByBlog(Blog blog, Pageable pageable);
 
+	Item findByBlogAndLink(Blog blog, String link);
 }
