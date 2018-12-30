@@ -60,7 +60,7 @@ public class InitDbService {
 		
 		Blog blogNaverTravel = new Blog();
 		blogNaverTravel.setName("JejuBlog");
-		blogNaverTravel.setUrl("https://rss.blog.naver.com/findjeju.xml");
+		blogNaverTravel.setUrl("http://feeds.feedburner.com/naver/KZsJ?format=xml");
 		blogNaverTravel.setUser(userAdmin);
 		blogRepository.save(blogNaverTravel);
 		
