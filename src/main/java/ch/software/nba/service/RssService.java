@@ -28,7 +28,7 @@ import ch.software.nba.rss.TRssItem;
 public class RssService {
 	 
 	public List<Item> getItems(File file) throws RssException {
-		return getItems(new StreamSource(file));
+		return getItems(new StreamSource(file) ); 
 	}
 
 	public List<Item> getItems(String url) throws RssException {
