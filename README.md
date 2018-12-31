@@ -4,5 +4,5 @@ heroku website url for this project:https://topnaverblogs.herokuapp.com/
 
 
 # Admin detail
-name:admin
+name:admin<br />
 password:admin
