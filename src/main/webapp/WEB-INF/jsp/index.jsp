@@ -3,7 +3,7 @@
 
 <%@ include file="../layout/taglib.jsp"%>
 
-<h1>Latest news from the naver world:</h1>
+<h1>Latest news from the naver world :</h1>
 
 
 <table class="table table-bordered table-hover table-striped">
