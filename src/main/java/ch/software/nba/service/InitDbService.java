@@ -60,23 +60,11 @@ public class InitDbService {
 		
 		Blog blogNaverTravel = new Blog();
 		blogNaverTravel.setName("JejuBlog");
-		blogNaverTravel.setUrl("http://feeds.feedburner.com/naver/KZsJ?format=xml");
+		blogNaverTravel.setUrl("https://rss.blog.naver.com/findjeju.xml");
 		blogNaverTravel.setUser(userAdmin);
 		blogRepository.save(blogNaverTravel);
 		
-		Item item1 = new Item();
-		item1.setBlog(blogNaverTravel);
-		item1.setTitle("けいしけいしけし");
-		item1.setLink("https://blog.naver.com/findjeju/221426162613");
-		item1.setPublishedDate(new Date());
-		itemRepositoy.save(item1);
-		
-		Item item2 = new Item();
-		item2.setBlog(blogNaverTravel);
-		item2.setTitle("second");
-		item2.setLink("https://blog.naver.com/findjeju/221426162613");
-		item2.setPublishedDate(new Date());
-		itemRepositoy.save(item2);
+
 		
 		
 		
